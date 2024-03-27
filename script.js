@@ -87,7 +87,7 @@ function convert() {
         const kJmol_eV = kJmol * 0.010364269656262175;
         const kJmol_nm = 1239.8419843320025 * kJmol_eV;
         const kJmol_hartree = kJmol_eV / 27.211386245988;
-        const kJmol_kcalmol = kcalmol * 0.2390057361376673;
+        const kJmol_kcalmol = kJmol * 0.2390057361376673;
         const kJmol_cm = kJmol_eV * 8065.543937349212;
         const kJmol_K = kJmol_eV * 11604.518121550082;
         const kJmol_C = kJmol_K - 273.15;
