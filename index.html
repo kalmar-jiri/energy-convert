@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>unit converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>UNIT CONVERTER</h1>
+    <div class="input-container">
+        <div class="input-row">
+            <label for="input1">eV:</label>
+            <input type="number" id="input1" step="any" onkeydown="handleKeyDown(event)">
+        </div>
+        <div class="input-row">
+            <label for="input2">&lambda; (nm):</label>
+            <input type="number" id="input2" step="any" onkeydown="handleKeyDown(event)">
+        </div>
+        <div class="input-row">
+            <label for="input3">Hartree:</label>
+            <input type="number" id="input3" step="any" onkeydown="handleKeyDown(event)">
+        </div>
+        <div class="input-row">
+            <label for="input4">kcal/mol:</label>
+            <input type="number" id="input4" step="any" onkeydown="handleKeyDown(event)">
+        </div>
+        <div class="input-row">
+            <label for="input5">kJ/mol:</label>
+            <input type="number" id="input5" step="any" onkeydown="handleKeyDown(event)">
+        </div>
+        <div class="input-row">
+            <label for="input6">cm<sup>-1</sup>:</label>
+            <input type="number" id="input6" step="any" onkeydown="handleKeyDown(event)">
+        </div>
+        <div class="input-row">
+            <label for="input7">T (K):</label>
+            <input type="number" id="input7" step="any" onkeydown="handleKeyDown(event)">
+        </div>
+        <div class="input-row">
+            <label for="input8">T (°C):</label>
+            <input type="number" id="input8" step="any" onkeydown="handleKeyDown(event)">
+        </div>
+    </div>
+    <button onclick="convert()">Convert</button>
+    <button onclick="clearFields()">Clear</button>
+
+    <hr>
+    <p>Press 'x' to clear the fields (or hit the 'Clear' button) before another conversion.</p>
+</body>
+</html>
