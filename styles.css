@@ -8,10 +8,62 @@ input[type="number"] {
     padding: 5px;
     font-size: 16px;
 }
-button {
+/* button {
     padding: 5px 10px;
     font-size: 16px;
+} */
+
+h1 {
+    padding: 5px 10px 25px;
+    font-size: 2.4rem;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    font-optical-sizing: auto;
+
 }
+
+/* hr {
+  border: none;
+  border-top: 5px dashed #999;
+  color: #999;
+  background-color: #fff;
+  height: 1px;
+  margin: 20px 0;
+} */
+
+hr {
+    height: 10px;
+    border: none;
+    position: relative;
+    background: #eaeaea;
+  }
+  
+  hr::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 100px solid #4a7c59;
+    border-bottom: 10px solid transparent;
+    transform: rotate(-45deg);
+  }
+  
+  hr::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 100px solid #4a7c59;
+    border-bottom: 10px solid transparent;
+    transform: rotate(45deg);
+  }
+
 .input-container {
     display: flex;
     flex-direction: column;
@@ -28,4 +80,7 @@ button {
     width: 120px;
     text-align: right;
     margin-right: 10px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: normal;
 }
