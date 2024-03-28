@@ -50,9 +50,17 @@
             <label for="input8">T (°C):</label>
             <input type="number" id="input8" step="any" onkeydown="handleKeyDown(event)">
         </div>
+        <div class="input-row">
+            <label for="input9">Hz:</label>
+            <input type="number" id="input9" step="any" onkeydown="handleKeyDown(event)">
+        </div>
+        <div class="input-row">
+            <label for="input10">J:</label>
+            <input type="number" id="input10" step="any" onkeydown="handleKeyDown(event)">
+        </div>
     </div>
     <button class="btn btn-success btn" onclick="convert()">Convert</button>
-    <button class="btn btn-success btn" onclick="clearFields()">Clear</button>
+    <button class="btn btn-danger btn" onclick="clearFields()">Clear</button>
 
     <hr>
     <p>Press 'x' to clear the fields (or hit the 'Clear' button) before another conversion.</p>
