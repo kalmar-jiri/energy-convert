@@ -1,26 +1,33 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
 }
 input[type="number"] {
-    width: 200px;
-    padding: 5px;
-    font-size: 16px;
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
 button {
-    padding: 5px 10px;
-    font-size: 16px;
-    margin: 0px 20px;
+  padding: 5px 10px;
+  font-size: 16px;
+  margin: 0px 20px;
 }
 
 h1 {
-    padding: 5px 10px 25px;
-    font-size: 2.4rem;
-    font-family: "Exo 2", sans-serif;
-    font-weight: 700;
-    font-optical-sizing: auto;
-
+  padding: 5px 10px 25px;
+  font-size: 2.4rem;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-optical-sizing: auto;
 }
 
 /* hr {
@@ -33,56 +40,56 @@ h1 {
 } */
 
 hr {
-    height: 10px;
-    border: none;
-    position: relative;
-    background: #eaeaea;
-  }
-  
-  hr::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -10px;
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-right: 100px solid #4a7c59;
-    border-bottom: 10px solid transparent;
-    transform: rotate(-45deg);
-  }
-  
-  hr::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: -10px;
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-left: 100px solid #4a7c59;
-    border-bottom: 10px solid transparent;
-    transform: rotate(45deg);
-  }
+  height: 10px;
+  border: none;
+  position: relative;
+  background: #eaeaea;
+}
+
+hr::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 100px solid #4a7c59;
+  border-bottom: 10px solid transparent;
+  transform: rotate(-45deg);
+}
+
+hr::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 100px solid #4a7c59;
+  border-bottom: 10px solid transparent;
+  transform: rotate(45deg);
+}
 
 .input-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-right: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-right: 120px;
 }
 .input-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 .input-row label {
-    width: 120px;
-    text-align: right;
-    margin-right: 10px;
-    font-family: "Libre Baskerville", serif;
-    font-weight: 600;
-    font-style: normal;
+  width: 120px;
+  text-align: right;
+  margin-right: 10px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  font-style: normal;
 }
