@@ -3,6 +3,7 @@ body {
   text-align: center;
   margin-top: 50px;
 }
+
 input[type="number"] {
   width: 200px;
   padding: 5px;
@@ -29,15 +30,6 @@ h1 {
   font-weight: 700;
   font-optical-sizing: auto;
 }
-
-/* hr {
-  border: none;
-  border-top: 5px dashed #999;
-  color: #999;
-  background-color: #fff;
-  height: 1px;
-  margin: 20px 0;
-} */
 
 hr {
   height: 10px;
@@ -79,12 +71,14 @@ hr::after {
   margin-bottom: 20px;
   padding-right: 120px;
 }
+
 .input-row {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
 }
+
 .input-row label {
   width: 120px;
   text-align: right;
