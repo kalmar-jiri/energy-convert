@@ -13,20 +13,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: gray;
+  background: #222;
 }
 
 .app {
-  background: white;
+  /* background: white; */
   padding: 50px;
   border-radius: 15px;
+  /* background: linear-gradient(135deg, #47ffce, #827ab4); */
+  background: linear-gradient(135deg, #adffe9, #9888ffc7);
 }
 
 input[type='number'] {
   width: 200px;
-  padding: 5px;
+  padding: 7px;
   font-size: 16px;
   margin: 2px auto;
+  border: none;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: 4px solid orange;
+  transition: all 0.3s;
 }
 
 input::-webkit-outer-spin-button,
@@ -41,7 +50,8 @@ button {
   width: 100px;
   font-size: 16px;
   margin: 0px 20px;
-  color: white;
+  color: rgb(255, 255, 255);
+  text-transform: up;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   border: none;
@@ -58,6 +68,7 @@ button:hover {
 
 button:active {
   box-shadow: none;
+  background: rgb(184, 73, 0);
 }
 
 h1 {
@@ -67,44 +78,11 @@ h1 {
   font-optical-sizing: auto;
 }
 
-hr {
-  height: 10px;
-  border: none;
-  position: relative;
-  background: #eaeaea;
-}
-
-hr::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -10px;
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-right: 100px solid #4a7c59;
-  border-bottom: 10px solid transparent;
-  transform: rotate(-45deg);
-}
-
-hr::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: -10px;
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-left: 100px solid #4a7c59;
-  border-bottom: 10px solid transparent;
-  transform: rotate(45deg);
-}
-
 .input-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding-right: 120px;
 }
 
@@ -112,12 +90,12 @@ hr::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .input-row label {
   width: 120px;
   text-align: right;
   margin-right: 10px;
-  font-weight: 500;
+  font-weight: 600;
 }
