@@ -10,12 +10,23 @@ body {
   font-family: 'Poppins', sans-serif;
   text-align: center;
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: gray;
+}
+
+.app {
+  background: white;
+  padding: 50px;
+  border-radius: 15px;
 }
 
 input[type='number'] {
   width: 200px;
   padding: 5px;
   font-size: 16px;
+  margin: 2px auto;
 }
 
 input::-webkit-outer-spin-button,
@@ -26,9 +37,27 @@ input::-webkit-inner-spin-button {
 }
 
 button {
-  padding: 5px 10px;
+  padding: 10px;
+  width: 100px;
   font-size: 16px;
   margin: 0px 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  border: none;
+  background: orange;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 1px 1px 5px hsl(0, 0%, 50%);
+}
+
+button:hover {
+  background: rgb(255, 102, 0);
+}
+
+button:active {
+  box-shadow: none;
 }
 
 h1 {
