@@ -9,6 +9,7 @@ function convert() {
   const input8 = document.getElementById('input8');
   const input9 = document.getElementById('input9');
   const input10 = document.getElementById('input10');
+  const input11 = document.getElementById('input11');
 
   const electronvolt = parseFloat(input1.value);
   const wavelength = parseFloat(input2.value);
@@ -20,6 +21,7 @@ function convert() {
   const C = parseFloat(input8.value);
   const Hz = parseFloat(input9.value);
   const J = parseFloat(input10.value);
+  const Ry = parseFloat(input11.value);
 
   if (!isNaN(electronvolt) && electronvolt > 0) {
     // eV to others
@@ -33,6 +35,7 @@ function convert() {
     const eV_C = eV_K - 273.15;
     const eV_Hz = electronvolt * 241798924208491.8;
     const eV_J = electronvolt * 1.602176634e-19;
+    const eV_Ry = eV_J / 2.1798723610991727e-18;
     input2.value = eV_nm.toFixed(7);
     input3.value = eV_Hartree.toFixed(7);
     input4.value = eV_kcalmol.toFixed(7);
@@ -42,6 +45,7 @@ function convert() {
     input8.value = eV_C.toFixed(7);
     input9.value = eV_Hz.toExponential(7);
     input10.value = eV_J.toExponential(7);
+    input11.value = eV_Ry.toFixed(7);
 
     input1.blur();
   } else if (!isNaN(wavelength) && wavelength > 0) {
@@ -56,6 +60,7 @@ function convert() {
     const nm_C = nm_K - 273.15;
     const nm_Hz = nm_eV * 241798924208491.8;
     const nm_J = nm_eV * 1.602176634e-19;
+    const nm_Ry = nm_J / 2.1798723610991727e-18;
     input1.value = nm_eV.toFixed(7);
     input3.value = nm_Hartree.toFixed(7);
     input4.value = nm_kcalmol.toFixed(7);
@@ -65,6 +70,7 @@ function convert() {
     input8.value = nm_C.toFixed(7);
     input9.value = nm_Hz.toExponential(7);
     input10.value = nm_J.toExponential(7);
+    input11.value = nm_Ry.toFixed(7);
 
     input2.blur();
   } else if (!isNaN(hartree) && hartree > 0) {
@@ -78,6 +84,7 @@ function convert() {
     const hartree_C = hartree_K - 273.15;
     const hartree_Hz = hartree_eV * 241798924208491.8;
     const hartree_J = hartree_eV * 1.602176634e-19;
+    const hartree_Ry = hartree_J / 2.1798723610991727e-18;
     input1.value = hartree_eV.toFixed(7);
     input2.value = hartree_nm.toFixed(7);
     input4.value = hartree_kcalmol.toFixed(7);
@@ -87,6 +94,7 @@ function convert() {
     input8.value = hartree_C.toFixed(7);
     input9.value = hartree_Hz.toExponential(7);
     input10.value = hartree_J.toExponential(7);
+    input11.value = hartree_Ry.toFixed(7);
 
     input3.blur();
   } else if (!isNaN(kcalmol) && kcalmol > 0) {
@@ -100,6 +108,7 @@ function convert() {
     const kcalmol_C = kcalmol_K - 273.15;
     const kcalmol_Hz = kcalmol_eV * 241798924208491.8;
     const kcalmol_J = kcalmol_eV * 1.602176634e-19;
+    const kcalmol_Ry = kcalmol_J / 2.1798723610991727e-18;
     input1.value = kcalmol_eV.toFixed(7);
     input2.value = kcalmol_nm.toFixed(7);
     input3.value = kcalmol_hartree.toFixed(7);
@@ -109,6 +118,7 @@ function convert() {
     input8.value = kcalmol_C.toFixed(7);
     input9.value = kcalmol_Hz.toExponential(7);
     input10.value = kcalmol_J.toExponential(7);
+    input11.value = kcalmol_Ry.toFixed(7);
 
     input4.blur();
   } else if (!isNaN(kJmol) && kJmol > 0) {
@@ -122,6 +132,7 @@ function convert() {
     const kJmol_C = kJmol_K - 273.15;
     const kJmol_Hz = kJmol_eV * 241798924208491.8;
     const kJmol_J = kJmol_eV * 1.602176634e-19;
+    const kJmol_Ry = kJmol_J / 2.1798723610991727e-18;
     input1.value = kJmol_eV.toFixed(7);
     input2.value = kJmol_nm.toFixed(7);
     input3.value = kJmol_hartree.toFixed(7);
@@ -131,6 +142,7 @@ function convert() {
     input8.value = kJmol_C.toFixed(7);
     input9.value = kJmol_Hz.toExponential(7);
     input10.value = kJmol_J.toExponential(7);
+    input11.value = kJmol_Ry.toFixed(7);
 
     input5.blur();
   } else if (!isNaN(cm) && cm > 0) {
@@ -144,6 +156,7 @@ function convert() {
     const cm_C = cm_K - 273.15;
     const cm_Hz = cm_eV * 241798924208491.8;
     const cm_J = cm_eV * 1.602176634e-19;
+    const cm_Ry = cm_J / 2.1798723610991727e-18;
     input1.value = cm_eV.toFixed(7);
     input2.value = cm_nm.toFixed(7);
     input3.value = cm_hartree.toFixed(7);
@@ -153,6 +166,7 @@ function convert() {
     input8.value = cm_C.toFixed(7);
     input9.value = cm_Hz.toExponential(7);
     input10.value = cm_J.toExponential(7);
+    input11.value = cm_Ry.toFixed(7);
 
     input6.blur();
   } else if (!isNaN(K) && K > 0) {
@@ -166,6 +180,7 @@ function convert() {
     const K_C = K - 273.15;
     const K_Hz = K_eV * 241798924208491.8;
     const K_J = K_eV * 1.602176634e-19;
+    const K_Ry = K_J / 2.1798723610991727e-18;
     input1.value = K_eV.toFixed(7);
     input2.value = K_nm.toFixed(7);
     input3.value = K_hartree.toFixed(7);
@@ -175,6 +190,7 @@ function convert() {
     input8.value = K_C.toFixed(7);
     input9.value = K_Hz.toExponential(7);
     input10.value = K_J.toExponential(7);
+    input11.value = K_Ry.toFixed(7);
 
     input7.blur();
   } else if (!isNaN(C) && C >= -273.15) {
@@ -188,6 +204,7 @@ function convert() {
     const C_cm = C_eV * 8065.543937349212;
     const C_Hz = C_eV * 241798924208491.8;
     const C_J = C_eV * 1.602176634e-19;
+    const C_Ry = C_J / 2.1798723610991727e-18;
     input1.value = C_eV.toFixed(7);
     input2.value = C_nm.toFixed(7);
     input3.value = C_hartree.toFixed(7);
@@ -197,6 +214,7 @@ function convert() {
     input7.value = C_K.toFixed(7);
     input9.value = C_Hz.toExponential(7);
     input10.value = C_J.toExponential(7);
+    input11.value = C_Ry.toFixed(7);
 
     input8.blur();
   } else if (!isNaN(Hz) && Hz > 0) {
@@ -210,6 +228,7 @@ function convert() {
     const Hz_K = Hz_eV * 11604.518121550082;
     const Hz_C = Hz_K - 273.15;
     const Hz_J = Hz_eV * 1.602176634e-19;
+    const Hz_Ry = Hz_J / 2.1798723610991727e-18;
     input1.value = Hz_eV.toExponential(7);
     input2.value = Hz_nm.toExponential(7);
     input3.value = Hz_hartree.toExponential(7);
@@ -219,10 +238,11 @@ function convert() {
     input7.value = Hz_K.toExponential(7);
     input8.value = Hz_C.toFixed(7);
     input10.value = Hz_J.toExponential(7);
+    input11.value = Hz_Ry.toExponential(7);
 
     input9.blur();
   } else if (!isNaN(J) && J > 0) {
-    // Hz to others
+    // J to others
     const J_eV = J / 1.602176634e-19;
     const J_nm = 1239.8419843320025 / J_eV;
     const J_hartree = J_eV / 27.211386245988;
@@ -232,6 +252,7 @@ function convert() {
     const J_K = J_eV * 11604.518121550082;
     const J_C = J_K - 273.15;
     const J_Hz = J_eV * 241798924208491.8;
+    const J_Ry = J / 2.1798723610991727e-18;
     input1.value = J_eV.toExponential(7);
     input2.value = J_nm.toExponential(7);
     input3.value = J_hartree.toExponential(7);
@@ -241,8 +262,33 @@ function convert() {
     input7.value = J_K.toExponential(7);
     input8.value = J_C.toExponential(7);
     input9.value = J_Hz.toExponential(7);
+    input11.value = J_Ry.toExponential(7);
 
     input10.blur();
+  } else if (!isNaN(Ry) && Ry > 0) {
+    // Ry to others
+    const Ry_J = Ry * 2.1798723610991727e-18;
+    const Ry_eV = Ry_J / 1.602176634e-19;
+    const Ry_nm = 1239.8419843320025 / Ry_eV;
+    const Ry_hartree = Ry_eV / 27.211386245988;
+    const Ry_kcalmol = Ry_eV * 23.060547830619026;
+    const Ry_kJmol = Ry_eV * 96.48533212331;
+    const Ry_cm = Ry_eV * 8065.543937349212;
+    const Ry_K = Ry_eV * 11604.518121550082;
+    const Ry_C = Ry_K - 273.15;
+    const Ry_Hz = Ry_eV * 241798924208491.8;
+    input1.value = Ry_eV.toFixed(7);
+    input2.value = Ry_nm.toFixed(7);
+    input3.value = Ry_hartree.toFixed(7);
+    input4.value = Ry_kcalmol.toFixed(7);
+    input5.value = Ry_kJmol.toFixed(7);
+    input6.value = Ry_cm.toFixed(7);
+    input7.value = Ry_K.toFixed(7);
+    input8.value = Ry_C.toFixed(7);
+    input9.value = Ry_Hz.toExponential(7);
+    input10.value = Ry_J.toExponential(7);
+
+    input11.blur();
   } else {
     alert('Please enter a valid positive number.');
   }
@@ -259,6 +305,7 @@ function clearFields() {
   input8.value = '';
   input9.value = '';
   input10.value = '';
+  input11.value = '';
 }
 
 function handleKeyDown(event) {
